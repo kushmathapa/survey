@@ -8,6 +8,7 @@
         >
       </div>
       <p v-if="isLoading">Loading...</p>
+      <p v-else-if="!isLoading && errorMessage">{{ errorMessage }}</p>
       <p v-else-if="!isLoading && (!results || results.length === 0)">
         Opps there are no responses to display...
       </p>
